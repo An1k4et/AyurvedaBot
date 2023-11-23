@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ayurveda_chatbot/main.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'login.dart';
 import 'main2.dart';
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
@@ -42,16 +43,19 @@ class _SplashScreenState extends State<SplashScreen> {
               style: TextStyle(
                 fontFamily: 'Poppins',
                 color: Color.fromRGBO(28, 82, 126, 1),
-                fontSize: 30,
+                fontSize: 30.sp,
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              'Unlock Ayurvedic Wisdom with AyurvedaBot',
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Color.fromRGBO(28, 82, 126, 1),
-                fontSize: 16,
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Text(
+                'Unlock Ayurvedic Wisdom with AyurvedaBot',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Color.fromRGBO(28, 82, 126, 1),
+                  fontSize: 16,
+                ),
               ),
             ),
             SizedBox(height: 50),
