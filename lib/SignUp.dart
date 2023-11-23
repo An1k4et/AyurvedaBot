@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'chat.dart';
 import 'login.dart';
+import 'main2.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
       UserCredential?  usercredential;
       try{
         usercredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: pass).then((value){
-          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>ChatBot()));
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>const Home()));
         });
         await usercredential?.user?.updateDisplayName(name);
       }
@@ -45,9 +45,9 @@ class _SignUpState extends State<SignUp> {
         child: Container(
           width: screenWidth,
           height: screenHeight,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/Background (1).png'), // Replace with your image path
+              image: AssetImage('assets/images/Background (1).png'), // Replace with your image path
               fit: BoxFit.fill, // Adjust as needed
             ),
           ),

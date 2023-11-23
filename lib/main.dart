@@ -1,4 +1,4 @@
-import 'package:ayurveda_chatbot/SplashScreen.dart';
+import 'package:ayurveda_chatbot/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
         debugShowCheckedModeBanner: false,  //To not show debug banner
         home: Scaffold( //To not overflow when keyboard arrive
-          body: splash()
+          body: SplashScreen()
         ),
       );
       },

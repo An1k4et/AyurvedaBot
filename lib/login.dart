@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'SignUp.dart';
-import 'chat.dart';
+import 'main2.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
       UserCredential?  usercredential;
       try{
         usercredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: pass).then((value){
-          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>ChatBot()));
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>const Home()));
         });
       }
       on FirebaseAuthException catch(ex){
@@ -46,9 +46,9 @@ class _LoginState extends State<Login> {
         child: Container(
           width: screenWidth,
           height: screenHeight,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/Background (1).png'), // Replace with your image path
+              image: AssetImage('assets/images/Background (1).png'), // Replace with your image path
               fit: BoxFit.fill, // Adjust as needed
             ),
           ),
