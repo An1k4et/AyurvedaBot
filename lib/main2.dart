@@ -3,6 +3,8 @@ import 'package:ayurveda_chatbot/splash.dart';
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:ayurveda_chatbot/messages.dart';
 
+import 'login.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -62,12 +64,19 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.logout),
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login()));
+          },
+        ),
         title: const Text(
           'Ayurveda Bot',
           style: TextStyle(
             fontFamily: 'Poppins',
             fontSize: 24,
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -77,8 +86,8 @@ class _HomeState extends State<Home> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color.fromARGB(60, 40, 50, 70),
-                Color.fromARGB(200, 10, 30, 40),
+                Color.fromARGB(60, 19, 24, 33),
+                Color.fromARGB(200, 0, 6, 9),
               ],
             ),
           ),
@@ -102,8 +111,8 @@ class _HomeState extends State<Home> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color.fromARGB(60, 40, 50, 70),
-                      Color.fromARGB(200, 10, 30, 40),
+                      Color.fromARGB(60, 33, 41, 58),
+                      Color.fromARGB(200, 5, 16, 21),
                     ],
                   ),
                 ),

@@ -49,6 +49,7 @@ class Component {
         style: TextStyle(
           fontFamily: 'ReadexPro',
           fontSize: 20.sp,
+          color: Colors.white,
         ),
       ),
       style: ElevatedButton.styleFrom(

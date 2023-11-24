@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ayurveda_chatbot/main.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'login.dart';
-import 'main2.dart';
 
 class SplashScreen extends StatefulWidget {
   // ignore: use_key_in_widget_constructors
